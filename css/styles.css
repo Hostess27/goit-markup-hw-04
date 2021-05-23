@@ -31,6 +31,11 @@ body {
     outline: none;
     display: inline-block;
 }
+
+a {
+    text-decoration: none;
+}
+
 .list {
     list-style: none;
     padding: 0;
@@ -78,6 +83,20 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* Шапка и подвал */
@@ -139,6 +158,21 @@ img {
     color: var(--accent-color);
 }
 
+.main-nav .current {
+    color: var(--accent-color);
+}
+
+.auth-nav-link {
+    display: flex;
+    align-items: center;
+    color: var(--primary-text-color);
+}
+
+.auth-nav-link:hover,
+.auth-nav-link:focus {
+    color: var(--accent-color);
+}
+
 .auth-nav {
     display: flex;
     margin-left: auto;
@@ -162,20 +196,29 @@ img {
     font-weight: 500;
 }
 
-.contact .mail,
-.contact .tel {
-    color: var(--primary-text-color);
-}
 .contact .mail:focus,
 .contact .mail:hover,
 .contact .tel:focus,
 .contact .tel:hover {
     color: var(--accent-color);
 }
+
+.mail-icon,
+.tel-icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.mail-icon:hover,
+.tel-icon:hover {
+    fill: var(--accent-color);
+}
+
 .mail-like {
     color: var(--primary-text-color);
     letter-spacing: 0.02em;
 }
+
 .adds-like {
     font-style: normal;
 }
@@ -199,12 +242,85 @@ img {
     margin-bottom: 9px;
 }
 
+.company {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.company-list {
+    border: 1px solid var(--primary-text-color);
+    border-radius: 4px;
+}
+
+.flex-footer {
+    display: flex;
+    align-items: center;
+}
+
+.adds {
+    margin-right: 70px;
+}
+
+.plea-title {
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social-list {
+    display: block;
+    width: 44px;
+    height: 44px;
+    color: var(--white);
+    background-color: var(--primary-text-color);
+    border-radius: 50%;
+    
+
+    
+}
+
+.social-list:not(:last-child){
+    margin-right: 10px;
+}
+.social-list:hover,
+.social-list:focus {
+    color: var(--accent-color);
+}
+
+/* .flex-social{
+    display: flex;
+    align-items: center;
+    
+} */
+
 /* index.html */
 .hero {
     background-color: var(--secondary-background-color);
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+
+    background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/workteam.jpg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
     /* outline: 1px solid tomato; */
 }
@@ -316,6 +432,7 @@ img {
     color: var(--title-text-color);
     font-size: 16px;
     line-height: 1.18;
+
     font-weight: 500;
     text-align: center;
 
@@ -336,10 +453,6 @@ img {
 }
 
 /* portfolio.html */
-
-.invise {
-    visibility: hidden;
-}
 
 .site-option {
     display: flex;
