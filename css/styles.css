@@ -277,7 +277,6 @@ svg {
 
 .social {
     display: flex;
-    margin-left: auto;
     align-items: center;
     justify-content: center;
 }
@@ -290,10 +289,10 @@ svg {
 }
 
 .social-link {
-    display: inline-block;
+    display: inline-flex;
     width: 44px;
     height: 44px;
-    padding: 12px;
+    align-items: center;
     border-radius: 50%;
 
     background-color: rgba(255, 255, 255, 0.1);
@@ -471,7 +470,6 @@ svg {
 
 .social-team {
     display: flex;
-    margin-left: auto;
     align-items: center;
     justify-content: center;
 }
@@ -480,14 +478,17 @@ svg {
     margin-right: 10px;
 }
 
+.social-team-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .social-team-link {
-    display: inline-block;
+    display: inline-flex;
     width: 44px;
     height: 44px;
-    padding: 12px;
     border-radius: 50%;
-
-    background-color: inherit;
 }
 
 .social-team-list .social-team-link .social-team-icon {
@@ -514,7 +515,6 @@ svg {
 
 .company {
     display: flex;
-    margin-left: auto;
     align-items: center;
     justify-content: center;
 }
@@ -524,17 +524,17 @@ svg {
 }
 
 .company-link {
-    display: block;
+    display: inline-flex;
     border: 1px solid var(--blue-gray);
     width: 170px;
     height: 92px;
-    padding: 16px 32px;
+    align-items: center;
     border-radius: 4px;
 
     fill: var(--blue-gray);
 }
 
-.company-link:hover,
+.company-link:hover .company-icon,
 .company-link:focus .company-icon {
     fill: var(--accent-color);
 }
