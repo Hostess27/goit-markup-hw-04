@@ -88,11 +88,7 @@ img {
 }
 
 svg {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
 }
 
 .visually-hidden {
@@ -293,6 +289,7 @@ svg {
     width: 44px;
     height: 44px;
     align-items: center;
+    justify-content: center;
     border-radius: 50%;
 
     background-color: rgba(255, 255, 255, 0.1);
@@ -355,7 +352,6 @@ svg {
 
 .feature-list {
     display: flex;
-    width: 270px;
 }
 
 .section.feature-section {
@@ -371,13 +367,14 @@ svg {
 }
 
 .line-icon {
-    display: inline-block;
-    width: 270px;
-    height: 120px;
-    width: 270px;
+    display: flex;
+    width: 100%;
     height: 120px;
     background-color: var(--title-background-color);
     border-radius: 4px;
+
+    align-items: center;
+    justify-content: center;
 
     padding: 20px 100px;
     margin-bottom: 30px;
@@ -390,9 +387,7 @@ svg {
     font-weight: 700;
     text-transform: uppercase;
 
-    margin-top: 0;
     margin-bottom: 10px;
-    min-width: 270px;
 }
 .section-info {
     font-size: 14px;
@@ -480,8 +475,6 @@ svg {
 
 .social-team-list {
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .social-team-link {
@@ -489,6 +482,8 @@ svg {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-team-list .social-team-link .social-team-icon {
@@ -528,6 +523,7 @@ svg {
     border: 1px solid var(--blue-gray);
     width: 170px;
     height: 92px;
+    justify-content: center;
     align-items: center;
     border-radius: 4px;
 
