@@ -498,15 +498,6 @@ svg {
 .social-team-list .social-team-link:focus {
     background-color: var(--accent-color);
 }
-/* .social-team-icon:hover,
-.social-team-icon:focus {
-    fill: var(--white);
-}
-
-.social-team-link:hover,
-.social-team-link:focus {
-    background-color: var(--accent-color);
-} */
 
 .company {
     display: flex;
@@ -576,6 +567,9 @@ svg {
 .site-option .site-option-button:focus {
     background-color: var(--accent-color);
     color: var(--white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
 .site-combining {
@@ -602,6 +596,12 @@ svg {
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
+}
+
+.site-combining-link:hover,
+.site-combining-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .section-name {
